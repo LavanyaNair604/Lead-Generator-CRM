@@ -1,0 +1,194 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #0f111a;
+  color: #f1f1f5;
+}
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 245px;
+  background: #171a27;
+  padding: 30px 22px;
+  border-right: 1px solid #292d3d;
+  position: relative;
+}
+
+.sidebar h2 {
+  color: #a78bfa;
+  font-size: 25px;
+  margin-bottom: 55px;
+}
+
+.menu-label {
+  color: #777e91;
+  font-size: 12px;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+.menu-item {
+  padding: 14px;
+  margin-bottom: 10px;
+  border-radius: 9px;
+  color: #a4a9ba;
+  cursor: pointer;
+}
+
+.menu-item.active {
+  background: #29233f;
+  color: #b69aff;
+}
+
+.sidebar-bottom {
+  position: absolute;
+  bottom: 30px;
+  color: #a4a9ba;
+  font-size: 13px;
+}
+
+.sidebar-bottom p {
+  color: #777e91;
+  margin-top: 8px;
+}
+
+/* Main content */
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+  min-width: 0;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 38px;
+}
+
+.topbar h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.topbar p,
+.stat-card p,
+.section-header p {
+  color: #9298aa;
+}
+
+.profile {
+  background: #29233f;
+  color: #b69aff;
+  padding: 12px 22px;
+  border-radius: 25px;
+}
+
+/* Statistics */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 35px;
+}
+
+.stat-card {
+  background: #191d2b;
+  border: 1px solid #292d3d;
+  padding: 25px;
+  border-radius: 14px;
+}
+
+.stat-card h2 {
+  font-size: 32px;
+  margin: 18px 0 8px;
+  color: #b69aff;
+}
+
+.stat-card span {
+  font-size: 13px;
+  color: #777e91;
+}
+
+/* Leads table */
+
+.leads-section {
+  background: #191d2b;
+  border: 1px solid #292d3d;
+  border-radius: 14px;
+  padding: 25px;
+}
+
+.section-header {
+  margin-bottom: 25px;
+}
+
+.section-header h2 {
+  margin-bottom: 8px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th {
+  color: #9298aa;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 16px;
+  border-bottom: 1px solid #303447;
+}
+
+td {
+  padding: 18px 16px;
+  border-bottom: 1px solid #292d3d;
+  font-size: 14px;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background: #222638;
+}
+
+@media (max-width: 800px) {
+  .sidebar {
+    width: 180px;
+  }
+
+  .main-content {
+    padding: 22px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  .sidebar {
+    display: none;
+  }
+}
